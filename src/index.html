@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/src/">
+    <title>Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="App/Styles/app.css">
+</head>
+<body>
+    <div id="app" v-cloak class="flex flex-col gap-4 justify-center items-center p-4 w-full">
+        <div class="flex gap-2 items-center">
+            <img src="App/Images/vue.svg" alt="Vue Logo" class="w-32 h-32">
+            <img src="App/Images/tailwind.svg" alt="Vue Logo" class="w-32 h-32 mt-4">
+        </div>
+
+        <div class="w-96">
+            <my-component
+                message="Hello World!"
+                class="p-4 border border-black rounded hover:shadow transform hover:scale-110 transition duration-300 ease-in-out"
+            />
+        </div>
+
+        <div class="w-96">
+            <my-component
+                @click="clickOnMessage"
+                :message="message"
+                class="p-4 border border-black rounded hover:shadow transform hover:scale-110 transition duration-300 ease-in-out"
+            />
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="App/app.js" type="module"></script>
+</body>
+</html>
